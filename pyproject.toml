@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "poetry-hooks"
+version = "0.1.0"
+description = ""
+authors = ["tjquillan <tjquillan@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.plugins."poetry.application.plugin"]
+poetry-hooks = "poetry_hooks:PoetryHooks"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+poetry = { version = "^1.2.0a2", allow-prereleases = true }
+
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+flake8 = "^4.0.1"
+ipython = "^8.0.1"
+mypy = "^0.931"
+pre-commit = "^2.17.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
